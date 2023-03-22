@@ -2,7 +2,7 @@
 //  RecipeData.swift
 //  Cookcademy
 //
-//  Created by Ilya on 30.01.2023.
+//  Created by Ben Stone on 4/19/21.
 //
 
 import Foundation
@@ -18,6 +18,10 @@ class RecipeData: ObservableObject {
             }
         }
         return filteredRecipes
+    }
+    
+    var favoriteRecipes: [Recipe] {
+        recipes.filter { $0.isFavorite }
     }
     
     func add(recipe: Recipe) {

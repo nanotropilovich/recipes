@@ -2,8 +2,9 @@
 //  ModifyIngredientView.swift
 //  Cookcademy
 //
-//  Created by Ilya on 01.02.2023.
+//  Created by Ben Stone on 4/19/21.
 //
+
 import SwiftUI
 
 struct ModifyIngredientView: ModifyComponentView {
@@ -15,10 +16,11 @@ struct ModifyIngredientView: ModifyComponentView {
         self.createAction = createAction
     }
 
-    private let listBackgroundColor = AppColor.background
-    private let listTextColor = AppColor.foreground
+    @AppStorage("listBackgroundColor") private var listBackgroundColor = AppColor.background
+    @AppStorage("listTextColor") private var listTextColor = AppColor.foreground
     
     @Environment(\.presentationMode) private var mode
+    @EnvironmentObject private var recipeData: RecipeData
 
     var body: some View {
         Form {

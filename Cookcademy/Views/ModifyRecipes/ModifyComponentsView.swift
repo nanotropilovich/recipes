@@ -1,10 +1,9 @@
 //
-//  ModifyIngredientsView.swift
+//  ModifyComponentsView.swift
 //  Cookcademy
 //
-//  Created by Ilya on 01.02.2023.
+//  Created by Ben Stone on 4/19/21.
 //
-
 
 import SwiftUI
 
@@ -31,8 +30,8 @@ protocol ModifyComponentView: View {
 struct ModifyComponentsView<Component: RecipeComponent, DestinationView: ModifyComponentView>: View where DestinationView.Component == Component {
     @Binding var components: [Component]
     
-    private let listBackgroundColor = AppColor.background
-    private let listTextColor = AppColor.foreground
+    @AppStorage("listBackgroundColor") private var listBackgroundColor = AppColor.background
+    @AppStorage("listTextColor") private var listTextColor = AppColor.foreground
 
     @State private var newComponent = Component()
     

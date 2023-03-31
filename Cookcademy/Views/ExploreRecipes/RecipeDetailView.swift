@@ -83,8 +83,15 @@ struct RecipeDetailView: View {
                     }
                     .navigationTitle("Edit Recipe")
             }
+            .onDisappear {
+                      recipeData.saveRecipes()
+                    }
+            
+            
         }
     }
+    
+    
 }
 
 struct RecipeDetailView_Previews: PreviewProvider {

@@ -29,7 +29,7 @@ To work with this project, you will need:
 
 git clone https://github.com/nanotropilovich/recipes.git
 
-2. Open the project in Xcode by selecting the `RecipeApp.xcodeproj` file.
+2. Open the project in Xcode by selecting the `Cookcademy.xcodeproj` file.
 
 3. Choose a simulator or device and click the "Run" (▶️) button.
 
